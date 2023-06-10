@@ -1,0 +1,28 @@
+annotations:
+  artifacthub.io/changes: |-
+    - "Add priorityClassName to pod spec (#557)"
+    - "Add hostAliases for all DC products (#556)"
+    - "Update appVersions for DC apps (#558)"
+  artifacthub.io/containsSecurityUpdates: "false"
+apiVersion: v2
+appVersion: 8.9.0
+dependencies:
+- name: common
+  repository: https://atlassian.github.io/data-center-helm-charts
+  version: 1.0.0
+description: A chart for installing Bitbucket Data Center on Kubernetes
+home: https://atlassian.github.io/data-center-helm-charts/
+icon: https://atlassian.github.io/data-center-helm-charts/icons/bitbucket.svg
+keywords:
+- Bitbucket
+- Bitbucket Server
+- Bitbucket Data Center
+- Bitbucket DC
+- Atlassian
+kubeVersion: '>=1.21.x-0'
+name: bitbucket
+sources:
+- https://github.com/atlassian/data-center-helm-charts
+- https://bitbucket.org/atlassian-docker/docker-atlassian-bitbucket-server/
+type: application
+version: 1.12.0

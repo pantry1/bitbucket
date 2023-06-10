@@ -1,0 +1,32 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EWXhNREExTVRjd01Wb1hEVE16TURZd056QTFNVGN3TVZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTTJQCndIVElEckZncWczZy9KeVgxbUtoQzlzOHdONGJOeThheHNidlpEdm1YKzRGSTUwOTRTU1oyVGNZTSt2M3ozdlIKTzFvT29kcHRLa25ySVpicTlNclVQM0hmL2t1N2pnVlVKUE85dFRHZVFXb243NGpPYnh3Y3pack41a3pBNWkrYwp5blFzOWZZamc4VCtLbkdCZmltcHJoaXVYQThSK2g4anR6RElCb3pYbW8wNlhKYUpCNm5lY213U0lNRThTalhaCmZHQ3RTUHJ0bm44S1hHTEV1amo5bVBHdWM5S2dncWdWVllDV3RLSlRoY0hOamxDTklQNjB5RmI3cUpwNngyb1kKcDJOVENIdlU1bFRYbllTUVlENkk4Sk5SRDNUYW82aVVTZHNZeWpCWDRBU1NvanNONk8vbGxRLzZNclF4ZVBadwpQTzhzSHNwZEkyTmFKb2ZqVTVFQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZPOFJyYk5zRlora2dwNUdmSnZFVVpHZS9WandNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSEpzdmNmN2VZVzl0cno4aHNMcwpkTjBxVVlCQXFNalFGTGxqWHRzN29xNUNQN1U1bmhFYzY5YW9IZEVoRjZxWk9LN1VXK3JhZ2JFMDdWZTB4a2w0CjRkaHRhK09sRFkraVJkb09mS2VjWFluSGMxa1c0TTBUWkl4ZW1XS2sweE9IdGYxdDRiQjFpQmlNblF6UVpaeFMKczhJY3VyZ09rOEhCWkN6RWl4b0tVTFpCOW5CUWtTaXQ0Q3gvNFRJQTZ0R3NXTFBXeU1YK3pXdmozQTkwQnNGZQpnMXZ4aDFiOVJLRDgvenBuWHhUQWdUWUlFWTZNL2svMkU2MTA5anR1L1F0T3dISnFhMEdlQksrVy80TDM0TTFWClNxNGIzb3JPT2MzZzhFV1FiSHZQNXhabHdSS0dWVkg3QXFZdVFSY21Pa2JHWWorS3BUSlluU0c5a1BuREF1RWwKN0s4PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://891A7D4592CD19583F87668DC5B5A676.gr7.ap-south-1.eks.amazonaws.com
+  name: arn:aws:eks:ap-south-1:998516096174:cluster/testing-eks-2
+contexts:
+- context:
+    cluster: arn:aws:eks:ap-south-1:998516096174:cluster/testing-eks-2
+    user: arn:aws:eks:ap-south-1:998516096174:cluster/testing-eks-2
+  name: arn:aws:eks:ap-south-1:998516096174:cluster/testing-eks-2
+current-context: arn:aws:eks:ap-south-1:998516096174:cluster/testing-eks-2
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:ap-south-1:998516096174:cluster/testing-eks-2
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - --region
+      - ap-south-1
+      - eks
+      - get-token
+      - --cluster-name
+      - testing-eks-2
+      - --output
+      - json
+      command: aws
+      env:
+      - name: AWS_PROFILE
+        value: svc-terraform
